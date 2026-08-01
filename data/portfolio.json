@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "retrato-artistico",
+    "title": "Retrato Artístico",
+    "category": "retratos",
+    "description": "Sesión de retrato en estudio con iluminación natural y fondos neutros. Capturando la esencia y personalidad del sujeto.",
+    "image": "images/portfolio/retrato-artistico.jpg",
+    "date": "2026-07-15",
+    "featured": true,
+    "order": 1
+  },
+  {
+    "slug": "boda-playa",
+    "title": "Boda en la Playa",
+    "category": "bodas",
+    "description": "Ceremonia íntima al atardecer en las costas del Caribe. Un momento mágico capturado con luz dorada natural.",
+    "image": "images/portfolio/boda-playa.jpg",
+    "date": "2026-06-20",
+    "featured": true,
+    "order": 2
+  },
+  {
+    "slug": "evento-corporativo",
+    "title": "Evento Corporativo",
+    "category": "eventos",
+    "description": "Cobertura fotográfica de la conferencia anual de tecnología. Más de 500 asistentes y 3 días de evento.",
+    "image": "images/portfolio/evento-corporativo.jpg",
+    "date": "2026-05-10",
+    "featured": false,
+    "order": 3
+  },
+  {
+    "slug": "producto-lifestyle",
+    "title": "Producto Lifestyle",
+    "category": "producto",
+    "description": "Fotografía de producto con estilo de vida para marca de skincare. Ambientación natural y minimalista.",
+    "image": "images/portfolio/producto-lifestyle.jpg",
+    "date": "2026-04-22",
+    "featured": true,
+    "order": 4
+  },
+  {
+    "slug": "moda-urbana",
+    "title": "Moda Urbana",
+    "category": "moda",
+    "description": "Editorial de moda urbana en las calles de la ciudad. Estilo contemporáneo y atrevido.",
+    "image": "images/portfolio/moda-urbana.jpg",
+    "date": "2026-03-15",
+    "featured": false,
+    "order": 5
+  },
+  {
+    "slug": "paisaje-nocturno",
+    "title": "Paisaje Nocturno",
+    "category": "paisajes",
+    "description": "Fotografía de larga exposición capturando las luces de la ciudad al anochecer.",
+    "image": "images/portfolio/paisaje-nocturno.jpg",
+    "date": "2026-02-08",
+    "featured": false,
+    "order": 6
+  }
+]

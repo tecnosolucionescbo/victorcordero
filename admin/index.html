@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - IMAGEN Fotografía</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body { background: #0a0a0a; color: #fff; font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body>
+    <nav class="navbar" style="opacity:1; transform:none;">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <svg width="80" height="48" viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 40 L450 40 L250 260 Z" fill="none" stroke="white" stroke-width="12" stroke-linejoin="round"/>
+                    <path d="M120 90 L380 90 L250 220 Z" fill="none" stroke="white" stroke-width="6" stroke-linejoin="round"/>
+                    <path d="M180 120 L320 120 L320 160 L220 160 L220 180 L300 180" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <text x="250" y="285" text-anchor="middle" fill="white" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="700" letter-spacing="0.3em">IMAGEN</text>
+                </svg>
+            </a>
+            <div class="nav-links" style="display:flex;">
+                <a href="../index.html" class="nav-link">Ver Sitio</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="admin-page section-container">
+        <h1 class="admin-title">Panel de Administración</h1>
+        <p class="admin-subtitle">Generador de contenido para el portafolio</p>
+
+        <div class="admin-instructions">
+            <h3>📋 Instrucciones para tu cliente</h3>
+            <ol>
+                <li>Llena el formulario con los datos de la fotografía</li>
+                <li>Copia el código JSON generado</li>
+                <li>Ve a <code>data/portfolio.json</code> en tu repositorio de GitHub</li>
+                <li>Pega el nuevo objeto dentro del array (después del último <code>}</code> y antes del <code>]</code>)</li>
+                <li>Sube la imagen a <code>images/portfolio/</code> con el mismo nombre que pusiste en "Ruta de imagen"</li>
+                <li>¡Listo! El sitio se actualizará automáticamente</li>
+            </ol>
+        </div>
+
+        <div class="admin-card">
+            <h2 class="admin-card-title">Agregar Nueva Fotografía</h2>
+            <form id="adminForm">
+                <div class="admin-form-row">
+                    <div>
+                        <label class="form-label">Título</label>
+                        <input type="text" id="adTitle" class="admin-input" placeholder="Ej: Retrato Artístico" required>
+                    </div>
+                    <div>
+                        <label class="form-label">Categoría</label>
+                        <input type="text" id="adCategory" class="admin-input" placeholder="Ej: retratos, bodas, eventos" required>
+                    </div>
+                </div>
+                <div class="admin-form-row">
+                    <div>
+                        <label class="form-label">Ruta de imagen</label>
+                        <input type="text" id="adImage" class="admin-input" placeholder="images/portfolio/mi-foto.jpg" required>
+                    </div>
+                    <div>
+                        <label class="form-label">Fecha (AAAA-MM-DD)</label>
+                        <input type="date" id="adDate" class="admin-input" required>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom:20px;">
+                    <label class="form-label">Descripción</label>
+                    <textarea id="adDesc" class="admin-input admin-textarea" placeholder="Describe la fotografía..."></textarea>
+                </div>
+                <div class="admin-form-row" style="grid-template-columns: 1fr 1fr; align-items: center;">
+                    <label class="admin-checkbox">
+                        <input type="checkbox" id="adFeatured">
+                        <span>Marcar como destacado</span>
+                    </label>
+                    <div>
+                        <label class="form-label">Orden (número)</label>
+                        <input type="number" id="adOrder" class="admin-input" placeholder="1, 2, 3..." value="1" min="1">
+                    </div>
+                </div>
+                <div style="margin-top:24px; display:flex; gap:16px;">
+                    <button type="submit" class="admin-btn">Generar JSON</button>
+                    <button type="button" id="copyBtn" class="admin-btn admin-btn-secondary">Copiar al Portapapeles</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="admin-card" id="resultCard" style="display:none;">
+            <h2 class="admin-card-title">JSON Generado</h2>
+            <div class="admin-preview" id="jsonPreview"></div>
+        </div>
+
+        <div class="admin-card">
+            <h2 class="admin-card-title">Plantilla de Archivo JSON</h2>
+            <p style="color:var(--muted); font-size:0.875rem; margin-bottom:16px;">
+                Este es el formato que debe tener cada fotografía en <code>data/portfolio.json</code>:
+            </p>
+            <div class="admin-preview">{
+  "slug": "nombre-unico",
+  "title": "Título de la Foto",
+  "category": "categoria",
+  "description": "Descripción breve de la fotografía.",
+  "image": "images/portfolio/nombre-imagen.jpg",
+  "date": "2026-07-31",
+  "featured": true,
+  "order": 1
+}</div>
+        </div>
+
+        <div class="admin-card">
+            <h2 class="admin-card-title">Categorías Disponibles</h2>
+            <p style="color:var(--muted); font-size:0.875rem; margin-bottom:16px;">
+                Puedes usar cualquiera de estas categorías o crear una nueva:
+            </p>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">retratos</span>
+                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">bodas</span>
+                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">eventos</span>
+                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">producto</span>
+                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">moda</span>
+                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">paisajes</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('adminForm');
+        const resultCard = document.getElementById('resultCard');
+        const jsonPreview = document.getElementById('jsonPreview');
+        const copyBtn = document.getElementById('copyBtn');
+        let generatedJSON = '';
+
+        function slugify(text) {
+            return text.toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .replace(/-+/g, '-')
+                .trim();
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const data = {
+                slug: slugify(document.getElementById('adTitle').value),
+                title: document.getElementById('adTitle').value,
+                category: document.getElementById('adCategory').value.toLowerCase().trim(),
+                description: document.getElementById('adDesc').value,
+                image: document.getElementById('adImage').value,
+                date: document.getElementById('adDate').value,
+                featured: document.getElementById('adFeatured').checked,
+                order: parseInt(document.getElementById('adOrder').value) || 1
+            };
+
+            generatedJSON = JSON.stringify(data, null, 2);
+            jsonPreview.textContent = generatedJSON;
+            resultCard.style.display = 'block';
+            resultCard.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        copyBtn.addEventListener('click', () => {
+            if (!generatedJSON) {
+                alert('Primero genera el JSON llenando el formulario');
+                return;
+            }
+            navigator.clipboard.writeText(generatedJSON).then(() => {
+                copyBtn.innerHTML = '<span>¡Copiado!</span>';
+                setTimeout(() => {
+                    copyBtn.innerHTML = '<span>Copiar al Portapapeles</span>';
+                }, 2000);
+            });
+        });
+
+        // Set today's date as default
+        document.getElementById('adDate').valueAsDate = new Date();
+    </script>
+</body>
+</html>
