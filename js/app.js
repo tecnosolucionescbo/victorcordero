@@ -11,254 +11,254 @@
     // ==========================================
     const portfolioData = [
         {
-            slug: "documental-vida-calle",
-            title: "Vida en la Calle",
-            category: "documentales",
-            description: "Retrato documental de la vida cotidiana en las calles de la ciudad.",
-            image: "images/portfolio/documental-vida-calle.jpg",
-            date: "2026-07-15",
-            featured: true,
-            order: 1
+            "slug": "documental-1",
+            "title": "Documentales",
+            "category": "documentales",
+            "description": "",
+            "image": "images/documental1.jpg",
+            "date": "2026-07-15",
+            "featured": true,
+            "order": 1
         },
         {
-            slug: "documental-mercado",
-            title: "Mercado Local",
-            category: "documentales",
-            description: "Colores y texturas del mercado tradicional, un viaje a la cultura local.",
-            image: "images/portfolio/documental-mercado.jpg",
-            date: "2026-07-14",
-            featured: false,
-            order: 2
+            "slug": "documental-2",
+            "title": "Documentales",
+            "category": "documentales",
+            "description": "",
+            "image": "images/documental2.jpg",
+            "date": "2026-07-14",
+            "featured": false,
+            "order": 2
         },
         {
-            slug: "documental-retratos",
-            title: "Retratos con Alma",
-            category: "documentales",
-            description: "Serie de retratos que capturan la esencia y personalidad de cada persona.",
-            image: "images/portfolio/documental-retratos.jpg",
-            date: "2026-07-13",
-            featured: false,
-            order: 3
+            "slug": "documental-3",
+            "title": "Documentales",
+            "category": "documentales",
+            "description": "",
+            "image": "images/documental3.jpg",
+            "date": "2026-07-13",
+            "featured": false,
+            "order": 3
         },
         {
-            slug: "documental-arquitectura",
-            title: "Arquitectura Urbana",
-            category: "documentales",
-            description: "Fotografía documental de la arquitectura moderna y su impacto visual.",
-            image: "images/portfolio/documental-arquitectura.jpg",
-            date: "2026-07-12",
-            featured: false,
-            order: 4
+            "slug": "documental-4",
+            "title": "Documentales",
+            "category": "documentales",
+            "description": "",
+            "image": "images/documental4.jpg",
+            "date": "2026-07-12",
+            "featured": false,
+            "order": 4
         },
         {
-            slug: "documental-tradiciones",
-            title: "Tradiciones Vivas",
-            category: "documentales",
-            description: "Documental fotográfico sobre tradiciones y costumbres que perduran.",
-            image: "images/portfolio/documental-tradiciones.jpg",
-            date: "2026-07-11",
-            featured: false,
-            order: 5
+            "slug": "documental-5",
+            "title": "Documentales",
+            "category": "documentales",
+            "description": "",
+            "image": "images/documental5.jpg",
+            "date": "2026-07-11",
+            "featured": false,
+            "order": 5
         },
         {
-            slug: "urbana-graffiti",
-            title: "Arte en los Muros",
-            category: "urbanas",
-            description: "Graffiti y murales que transforman las calles en galerías al aire libre.",
-            image: "images/portfolio/urbana-graffiti.jpg",
-            date: "2026-06-20",
-            featured: true,
-            order: 6
+            "slug": "urbana-1",
+            "title": "Urbanas",
+            "category": "urbanas",
+            "description": "",
+            "image": "images/urbana1.jpg",
+            "date": "2026-06-20",
+            "featured": true,
+            "order": 6
         },
         {
-            slug: "urbana-atardecer",
-            title: "Atardecer Metropolitano",
-            category: "urbanas",
-            description: "El sol poniente entre rascacielos, capturando la ciudad en su mejor luz.",
-            image: "images/portfolio/urbana-atardecer.jpg",
-            date: "2026-06-19",
-            featured: false,
-            order: 7
+            "slug": "urbana-2",
+            "title": "Urbanas",
+            "category": "urbanas",
+            "description": "",
+            "image": "images/urbana2.jpg",
+            "date": "2026-06-19",
+            "featured": false,
+            "order": 7
         },
         {
-            slug: "urbana-nocturna",
-            title: "Luces Nocturnas",
-            category: "urbanas",
-            description: "Fotografía de larga exposición de las luces de la ciudad durante la noche.",
-            image: "images/portfolio/urbana-nocturna.jpg",
-            date: "2026-06-18",
-            featured: false,
-            order: 8
+            "slug": "urbana-3",
+            "title": "Urbanas",
+            "category": "urbanas",
+            "description": "",
+            "image": "images/urbana3.jpg",
+            "date": "2026-06-18",
+            "featured": false,
+            "order": 8
         },
         {
-            slug: "urbana-transito",
-            title: "Flujo Urbano",
-            category: "urbanas",
-            description: "El movimiento constante de personas y vehículos en la metrópoli.",
-            image: "images/portfolio/urbana-transito.jpg",
-            date: "2026-06-17",
-            featured: false,
-            order: 9
+            "slug": "urbana-4",
+            "title": "Urbanas",
+            "category": "urbanas",
+            "description": "",
+            "image": "images/urbana4.jpg",
+            "date": "2026-06-17",
+            "featured": false,
+            "order": 9
         },
         {
-            slug: "urbana-detalles",
-            title: "Detalles de Ciudad",
-            category: "urbanas",
-            description: "Pequeños detalles que pasan desapercibidos en el ajetreo diario.",
-            image: "images/portfolio/urbana-detalles.jpg",
-            date: "2026-06-16",
-            featured: false,
-            order: 10
+            "slug": "urbana-5",
+            "title": "Urbanas",
+            "category": "urbanas",
+            "description": "",
+            "image": "images/urbana5.jpg",
+            "date": "2026-06-16",
+            "featured": false,
+            "order": 10
         },
         {
-            slug: "graduacion-ceremonia",
-            title: "Ceremonia de Graduación",
-            category: "graduacion",
-            description: "El momento de la entrega de títulos, alegría y emoción compartida.",
-            image: "images/portfolio/graduacion-ceremonia.jpg",
-            date: "2026-05-10",
-            featured: true,
-            order: 11
+            "slug": "graduacion-1",
+            "title": "Graduación",
+            "category": "graduacion",
+            "description": "",
+            "image": "images/graduacion1.jpg",
+            "date": "2026-05-10",
+            "featured": true,
+            "order": 11
         },
         {
-            slug: "graduacion-familia",
-            title: "Orgullo Familiar",
-            category: "graduacion",
-            description: "El abrazo y la sonrisa de los padres al ver a sus hijos graduarse.",
-            image: "images/portfolio/graduacion-familia.jpg",
-            date: "2026-05-09",
-            featured: false,
-            order: 12
+            "slug": "graduacion-2",
+            "title": "Graduación",
+            "category": "graduacion",
+            "description": "",
+            "image": "images/graduacion2.jpg",
+            "date": "2026-05-09",
+            "featured": false,
+            "order": 12
         },
         {
-            slug: "graduacion-birretes",
-            title: "Birretes al Viento",
-            category: "graduacion",
-            description: "El tradicional lanzamiento de birretes al final de la ceremonia.",
-            image: "images/portfolio/graduacion-birretes.jpg",
-            date: "2026-05-08",
-            featured: false,
-            order: 13
+            "slug": "graduacion-3",
+            "title": "Graduación",
+            "category": "graduacion",
+            "description": "",
+            "image": "images/graduacion3.jpg",
+            "date": "2026-05-08",
+            "featured": false,
+            "order": 13
         },
         {
-            slug: "graduacion-detalles",
-            title: "Detalles del Día",
-            category: "graduacion",
-            description: "Pequeños momentos que hacen especial el día de graduación.",
-            image: "images/portfolio/graduacion-detalles.jpg",
-            date: "2026-05-07",
-            featured: false,
-            order: 14
+            "slug": "graduacion-4",
+            "title": "Graduación",
+            "category": "graduacion",
+            "description": "",
+            "image": "images/graduacion4.jpg",
+            "date": "2026-05-07",
+            "featured": false,
+            "order": 14
         },
         {
-            slug: "graduacion-amigos",
-            title: "Amigos para Siempre",
-            category: "graduacion",
-            description: "La hermandad y amistad que se celebra en el último día de clases.",
-            image: "images/portfolio/graduacion-amigos.jpg",
-            date: "2026-05-06",
-            featured: false,
-            order: 15
+            "slug": "graduacion-5",
+            "title": "Graduación",
+            "category": "graduacion",
+            "description": "",
+            "image": "images/graduacion5.jpg",
+            "date": "2026-05-06",
+            "featured": false,
+            "order": 15
         },
         {
-            slug: "deporte-futbol",
-            title: "Pasión en el Campo",
-            category: "deporte",
-            description: "Acción y emoción en un partido de fútbol, congelando el momento decisivo.",
-            image: "images/portfolio/deporte-futbol.jpg",
-            date: "2026-04-22",
-            featured: true,
-            order: 16
+            "slug": "deporte-1",
+            "title": "Deporte",
+            "category": "deporte",
+            "description": "",
+            "image": "images/deporte1.jpg",
+            "date": "2026-04-22",
+            "featured": true,
+            "order": 16
         },
         {
-            slug: "deporte-basket",
-            title: "Basket en Movimiento",
-            category: "deporte",
-            description: "Jugadores en acción, capturando la intensidad del baloncesto.",
-            image: "images/portfolio/deporte-basket.jpg",
-            date: "2026-04-21",
-            featured: false,
-            order: 17
+            "slug": "deporte-2",
+            "title": "Deporte",
+            "category": "deporte",
+            "description": "",
+            "image": "images/deporte2.jpg",
+            "date": "2026-04-21",
+            "featured": false,
+            "order": 17
         },
         {
-            slug: "deporte-natacion",
-            title: "Bajo el Agua",
-            category: "deporte",
-            description: "Fotografía subacuática de nadadores en plena competencia.",
-            image: "images/portfolio/deporte-natacion.jpg",
-            date: "2026-04-20",
-            featured: false,
-            order: 18
+            "slug": "deporte-3",
+            "title": "Deporte",
+            "category": "deporte",
+            "description": "",
+            "image": "images/deporte3.jpg",
+            "date": "2026-04-20",
+            "featured": false,
+            "order": 18
         },
         {
-            slug: "deporte-ciclismo",
-            title: "Ruta y Velocidad",
-            category: "deporte",
-            description: "Ciclistas recorriendo caminos, la libertad sobre dos ruedas.",
-            image: "images/portfolio/deporte-ciclismo.jpg",
-            date: "2026-04-19",
-            featured: false,
-            order: 19
+            "slug": "deporte-4",
+            "title": "Deporte",
+            "category": "deporte",
+            "description": "",
+            "image": "images/deporte4.jpg",
+            "date": "2026-04-19",
+            "featured": false,
+            "order": 19
         },
         {
-            slug: "deporte-fuerza",
-            title: "Fuerza y Determinación",
-            category: "deporte",
-            description: "Atletas de alto rendimiento en su máxima expresión física.",
-            image: "images/portfolio/deporte-fuerza.jpg",
-            date: "2026-04-18",
-            featured: false,
-            order: 20
+            "slug": "deporte-5",
+            "title": "Deporte",
+            "category": "deporte",
+            "description": "",
+            "image": "images/deporte5.jpg",
+            "date": "2026-04-18",
+            "featured": false,
+            "order": 20
         },
         {
-            slug: "formacion-taller",
-            title: "Taller de Fotografía",
-            category: "formacion",
-            description: "Estudiantes aprendiendo técnicas de fotografía en un taller práctico.",
-            image: "images/portfolio/formacion-taller.jpg",
-            date: "2026-03-15",
-            featured: true,
-            order: 21
+            "slug": "formacion-1",
+            "title": "Formación",
+            "category": "formacion",
+            "description": "",
+            "image": "images/formacion1.jpg",
+            "date": "2026-03-15",
+            "featured": true,
+            "order": 21
         },
         {
-            slug: "formacion-ensenanza",
-            title: "El Arte de Enseñar",
-            category: "formacion",
-            description: "Momentos de enseñanza y aprendizaje en el aula de fotografía.",
-            image: "images/portfolio/formacion-ensenanza.jpg",
-            date: "2026-03-14",
-            featured: false,
-            order: 22
+            "slug": "formacion-2",
+            "title": "Formación",
+            "category": "formacion",
+            "description": "",
+            "image": "images/formacion2.jpg",
+            "date": "2026-03-14",
+            "featured": false,
+            "order": 22
         },
         {
-            slug: "formacion-practica",
-            title: "Práctica en Campo",
-            category: "formacion",
-            description: "Alumnos aplicando lo aprendido en sesiones prácticas de fotografía.",
-            image: "images/portfolio/formacion-practica.jpg",
-            date: "2026-03-13",
-            featured: false,
-            order: 23
+            "slug": "formacion-3",
+            "title": "Formación",
+            "category": "formacion",
+            "description": "",
+            "image": "images/formacion3.jpg",
+            "date": "2026-03-13",
+            "featured": false,
+            "order": 23
         },
         {
-            slug: "formacion-creatividad",
-            title: "Creatividad sin Límites",
-            category: "formacion",
-            description: "Explorando la creatividad a través de ejercicios fotográficos.",
-            image: "images/portfolio/formacion-creatividad.jpg",
-            date: "2026-03-12",
-            featured: false,
-            order: 24
+            "slug": "formacion-4",
+            "title": "Formación",
+            "category": "formacion",
+            "description": "",
+            "image": "images/formacion4.jpg",
+            "date": "2026-03-12",
+            "featured": false,
+            "order": 24
         },
         {
-            slug: "formacion-comunidad",
-            title: "Comunidad de Aprendizaje",
-            category: "formacion",
-            description: "El compañerismo y trabajo en equipo en los cursos de formación.",
-            image: "images/portfolio/formacion-comunidad.jpg",
-            date: "2026-03-11",
-            featured: false,
-            order: 25
+            "slug": "formacion-5",
+            "title": "Formación",
+            "category": "formacion",
+            "description": "",
+            "image": "images/formacion5.jpg",
+            "date": "2026-03-11",
+            "featured": false,
+            "order": 25
         }
     ];
 
@@ -309,14 +309,12 @@
     // NAVIGATION
     // ==========================================
     function initNavigation() {
-        // Mobile toggle
         navToggle.addEventListener('click', () => {
             navToggle.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         });
 
-        // Close mobile menu on link click
         document.querySelectorAll('.mobile-link').forEach(link => {
             link.addEventListener('click', () => {
                 navToggle.classList.remove('active');
@@ -325,21 +323,17 @@
             });
         });
 
-        // Navbar scroll effect
         let lastScroll = 0;
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset;
-
             if (currentScroll > 100) {
                 navbar.style.background = 'rgba(10, 10, 10, 0.95)';
             } else {
                 navbar.style.background = 'rgba(10, 10, 10, 0.85)';
             }
-
             lastScroll = currentScroll;
         });
 
-        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -371,7 +365,6 @@
             </button>`
         ).join('');
 
-        // Add click handlers
         portfolioFilters.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 portfolioFilters.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -409,14 +402,12 @@
                 <div class="portfolio-overlay">
                     <div class="portfolio-info">
                         <h3>${item.title}</h3>
-                        <p>${item.category}</p>
                     </div>
                 </div>
                 ${item.featured ? '<div class="portfolio-badge">Destacado</div>' : ''}
             </div>
         `).join('');
 
-        // Add click handlers
         portfolioGrid.querySelectorAll('.portfolio-item').forEach(item => {
             item.addEventListener('click', () => {
                 const index = parseInt(item.dataset.index);
@@ -483,7 +474,6 @@
             navigateLightbox('next');
         });
 
-        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (!lightbox.classList.contains('active')) return;
             if (e.key === 'Escape') closeLightbox();
@@ -535,8 +525,6 @@
             btn.innerHTML = '<span>Enviando...</span>';
             btn.disabled = true;
 
-            // If using Formspree, the form will submit normally
-            // This is just visual feedback
             setTimeout(() => {
                 btn.innerHTML = originalText;
                 btn.disabled = false;
@@ -554,7 +542,6 @@
         initYear();
         initForm();
 
-        // Load portfolio data
         currentItems = await loadExternalData();
         currentItems.sort((a, b) => (a.order || 999) - (b.order || 999));
 
@@ -563,7 +550,6 @@
         renderPortfolio();
     }
 
-    // Run when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
