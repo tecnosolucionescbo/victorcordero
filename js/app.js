@@ -409,9 +409,11 @@
         `).join('');
 
         portfolioGrid.querySelectorAll('.portfolio-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const index = parseInt(item.dataset.index);
-                openLightbox(index);
+            item.addEventListener('click', function() {
+                const index = parseInt(this.dataset.index);
+                if (!isNaN(index) && index < filteredItems.length) {
+                    openLightbox(index);
+                }
             });
         });
     }
@@ -420,6 +422,7 @@
     // LIGHTBOX
     // ==========================================
     function openLightbox(index) {
+        if (!filteredItems || filteredItems.length === 0) return;
         lightboxIndex = index;
         updateLightbox();
         lightbox.classList.add('active');
@@ -438,21 +441,16 @@
         const imageContainer = lightbox.querySelector('.lightbox-image');
 
         if (item.image) {
-            imageContainer.innerHTML = `<img src="${item.image}" alt="${item.title}" onerror="this.style.display='none'; this.parentElement.innerHTML='<svg width=\\'80\\' height=\\'80\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'1\\'><path d=\\'M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z\\'/><circle cx=\\'12\\' cy=\\'13\\' r=\\'4\\'/></svg>'">`;
-        } else {
-            imageContainer.innerHTML = `
-                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-            `;
+            imageContainer.innerHTML = `<img src="${item.image}" alt="${item.title}" onerror="this.parentElement.innerHTML='<svg width=\\'80\\' height=\\'80\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'1\\'><path d=\\'M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z\\'/><circle cx=\\'12\\' cy=\\'13\\' r=\\'4\\'/></svg>'">`;
         }
 
-        // Mostrar SOLO el título, ocultar la categoría
         lightboxTitle.textContent = item.title;
-        lightboxCategory.style.display = 'none';  // ← OCULTA LA CATEGORÍA
         lightboxDesc.textContent = '';
         lightboxCounter.textContent = `${lightboxIndex + 1} / ${filteredItems.length}`;
     }
 
     function navigateLightbox(direction) {
+        if (!filteredItems || filteredItems.length === 0) return;
         if (direction === 'next') {
             lightboxIndex = (lightboxIndex + 1) % filteredItems.length;
         } else {
@@ -462,21 +460,27 @@
     }
 
     function initLightbox() {
-        lightboxClose.addEventListener('click', closeLightbox);
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) closeLightbox();
-        });
-        lightboxPrev.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navigateLightbox('prev');
-        });
-        lightboxNext.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navigateLightbox('next');
-        });
+        if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+        if (lightbox) {
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+        }
+        if (lightboxPrev) {
+            lightboxPrev.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigateLightbox('prev');
+            });
+        }
+        if (lightboxNext) {
+            lightboxNext.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigateLightbox('next');
+            });
+        }
 
         document.addEventListener('keydown', (e) => {
-            if (!lightbox.classList.contains('active')) return;
+            if (!lightbox || !lightbox.classList.contains('active')) return;
             if (e.key === 'Escape') closeLightbox();
             if (e.key === 'ArrowRight') navigateLightbox('next');
             if (e.key === 'ArrowLeft') navigateLightbox('prev');
