@@ -11,64 +11,254 @@
     // ==========================================
     const portfolioData = [
         {
-            slug: "retrato-artistico",
-            title: "Retrato Artístico",
-            category: "retratos",
-            description: "Sesión de retrato en estudio con iluminación natural y fondos neutros.",
-            image: "images/portfolio/retrato-artistico.jpg",
+            slug: "documental-vida-calle",
+            title: "Vida en la Calle",
+            category: "documentales",
+            description: "Retrato documental de la vida cotidiana en las calles de la ciudad.",
+            image: "images/portfolio/documental-vida-calle.jpg",
             date: "2026-07-15",
             featured: true,
             order: 1
         },
         {
-            slug: "boda-playa",
-            title: "Boda en la Playa",
-            category: "bodas",
-            description: "Ceremonia íntima al atardecer en las costas del Caribe. Un momento mágico.",
-            image: "images/portfolio/boda-playa.jpg",
-            date: "2026-06-20",
-            featured: true,
+            slug: "documental-mercado",
+            title: "Mercado Local",
+            category: "documentales",
+            description: "Colores y texturas del mercado tradicional, un viaje a la cultura local.",
+            image: "images/portfolio/documental-mercado.jpg",
+            date: "2026-07-14",
+            featured: false,
             order: 2
         },
         {
-            slug: "evento-corporativo",
-            title: "Evento Corporativo",
-            category: "eventos",
-            description: "Cobertura fotográfica de la conferencia anual de tecnología.",
-            image: "images/portfolio/evento-corporativo.jpg",
-            date: "2026-05-10",
+            slug: "documental-retratos",
+            title: "Retratos con Alma",
+            category: "documentales",
+            description: "Serie de retratos que capturan la esencia y personalidad de cada persona.",
+            image: "images/portfolio/documental-retratos.jpg",
+            date: "2026-07-13",
             featured: false,
             order: 3
         },
         {
-            slug: "producto-lifestyle",
-            title: "Producto Lifestyle",
-            category: "producto",
-            description: "Fotografía de producto con estilo de vida para marca de skincare.",
-            image: "images/portfolio/producto-lifestyle.jpg",
-            date: "2026-04-22",
-            featured: true,
+            slug: "documental-arquitectura",
+            title: "Arquitectura Urbana",
+            category: "documentales",
+            description: "Fotografía documental de la arquitectura moderna y su impacto visual.",
+            image: "images/portfolio/documental-arquitectura.jpg",
+            date: "2026-07-12",
+            featured: false,
             order: 4
         },
         {
-            slug: "moda-urbana",
-            title: "Moda Urbana",
-            category: "moda",
-            description: "Editorial de moda urbana en las calles de la ciudad.",
-            image: "images/portfolio/moda-urbana.jpg",
-            date: "2026-03-15",
+            slug: "documental-tradiciones",
+            title: "Tradiciones Vivas",
+            category: "documentales",
+            description: "Documental fotográfico sobre tradiciones y costumbres que perduran.",
+            image: "images/portfolio/documental-tradiciones.jpg",
+            date: "2026-07-11",
             featured: false,
             order: 5
         },
         {
-            slug: "paisaje-nocturno",
-            title: "Paisaje Nocturno",
-            category: "paisajes",
-            description: "Fotografía de larga exposición capturando las luces de la ciudad.",
-            image: "images/portfolio/paisaje-nocturno.jpg",
-            date: "2026-02-08",
-            featured: false,
+            slug: "urbana-graffiti",
+            title: "Arte en los Muros",
+            category: "urbanas",
+            description: "Graffiti y murales que transforman las calles en galerías al aire libre.",
+            image: "images/portfolio/urbana-graffiti.jpg",
+            date: "2026-06-20",
+            featured: true,
             order: 6
+        },
+        {
+            slug: "urbana-atardecer",
+            title: "Atardecer Metropolitano",
+            category: "urbanas",
+            description: "El sol poniente entre rascacielos, capturando la ciudad en su mejor luz.",
+            image: "images/portfolio/urbana-atardecer.jpg",
+            date: "2026-06-19",
+            featured: false,
+            order: 7
+        },
+        {
+            slug: "urbana-nocturna",
+            title: "Luces Nocturnas",
+            category: "urbanas",
+            description: "Fotografía de larga exposición de las luces de la ciudad durante la noche.",
+            image: "images/portfolio/urbana-nocturna.jpg",
+            date: "2026-06-18",
+            featured: false,
+            order: 8
+        },
+        {
+            slug: "urbana-transito",
+            title: "Flujo Urbano",
+            category: "urbanas",
+            description: "El movimiento constante de personas y vehículos en la metrópoli.",
+            image: "images/portfolio/urbana-transito.jpg",
+            date: "2026-06-17",
+            featured: false,
+            order: 9
+        },
+        {
+            slug: "urbana-detalles",
+            title: "Detalles de Ciudad",
+            category: "urbanas",
+            description: "Pequeños detalles que pasan desapercibidos en el ajetreo diario.",
+            image: "images/portfolio/urbana-detalles.jpg",
+            date: "2026-06-16",
+            featured: false,
+            order: 10
+        },
+        {
+            slug: "graduacion-ceremonia",
+            title: "Ceremonia de Graduación",
+            category: "graduacion",
+            description: "El momento de la entrega de títulos, alegría y emoción compartida.",
+            image: "images/portfolio/graduacion-ceremonia.jpg",
+            date: "2026-05-10",
+            featured: true,
+            order: 11
+        },
+        {
+            slug: "graduacion-familia",
+            title: "Orgullo Familiar",
+            category: "graduacion",
+            description: "El abrazo y la sonrisa de los padres al ver a sus hijos graduarse.",
+            image: "images/portfolio/graduacion-familia.jpg",
+            date: "2026-05-09",
+            featured: false,
+            order: 12
+        },
+        {
+            slug: "graduacion-birretes",
+            title: "Birretes al Viento",
+            category: "graduacion",
+            description: "El tradicional lanzamiento de birretes al final de la ceremonia.",
+            image: "images/portfolio/graduacion-birretes.jpg",
+            date: "2026-05-08",
+            featured: false,
+            order: 13
+        },
+        {
+            slug: "graduacion-detalles",
+            title: "Detalles del Día",
+            category: "graduacion",
+            description: "Pequeños momentos que hacen especial el día de graduación.",
+            image: "images/portfolio/graduacion-detalles.jpg",
+            date: "2026-05-07",
+            featured: false,
+            order: 14
+        },
+        {
+            slug: "graduacion-amigos",
+            title: "Amigos para Siempre",
+            category: "graduacion",
+            description: "La hermandad y amistad que se celebra en el último día de clases.",
+            image: "images/portfolio/graduacion-amigos.jpg",
+            date: "2026-05-06",
+            featured: false,
+            order: 15
+        },
+        {
+            slug: "deporte-futbol",
+            title: "Pasión en el Campo",
+            category: "deporte",
+            description: "Acción y emoción en un partido de fútbol, congelando el momento decisivo.",
+            image: "images/portfolio/deporte-futbol.jpg",
+            date: "2026-04-22",
+            featured: true,
+            order: 16
+        },
+        {
+            slug: "deporte-basket",
+            title: "Basket en Movimiento",
+            category: "deporte",
+            description: "Jugadores en acción, capturando la intensidad del baloncesto.",
+            image: "images/portfolio/deporte-basket.jpg",
+            date: "2026-04-21",
+            featured: false,
+            order: 17
+        },
+        {
+            slug: "deporte-natacion",
+            title: "Bajo el Agua",
+            category: "deporte",
+            description: "Fotografía subacuática de nadadores en plena competencia.",
+            image: "images/portfolio/deporte-natacion.jpg",
+            date: "2026-04-20",
+            featured: false,
+            order: 18
+        },
+        {
+            slug: "deporte-ciclismo",
+            title: "Ruta y Velocidad",
+            category: "deporte",
+            description: "Ciclistas recorriendo caminos, la libertad sobre dos ruedas.",
+            image: "images/portfolio/deporte-ciclismo.jpg",
+            date: "2026-04-19",
+            featured: false,
+            order: 19
+        },
+        {
+            slug: "deporte-fuerza",
+            title: "Fuerza y Determinación",
+            category: "deporte",
+            description: "Atletas de alto rendimiento en su máxima expresión física.",
+            image: "images/portfolio/deporte-fuerza.jpg",
+            date: "2026-04-18",
+            featured: false,
+            order: 20
+        },
+        {
+            slug: "formacion-taller",
+            title: "Taller de Fotografía",
+            category: "formacion",
+            description: "Estudiantes aprendiendo técnicas de fotografía en un taller práctico.",
+            image: "images/portfolio/formacion-taller.jpg",
+            date: "2026-03-15",
+            featured: true,
+            order: 21
+        },
+        {
+            slug: "formacion-ensenanza",
+            title: "El Arte de Enseñar",
+            category: "formacion",
+            description: "Momentos de enseñanza y aprendizaje en el aula de fotografía.",
+            image: "images/portfolio/formacion-ensenanza.jpg",
+            date: "2026-03-14",
+            featured: false,
+            order: 22
+        },
+        {
+            slug: "formacion-practica",
+            title: "Práctica en Campo",
+            category: "formacion",
+            description: "Alumnos aplicando lo aprendido en sesiones prácticas de fotografía.",
+            image: "images/portfolio/formacion-practica.jpg",
+            date: "2026-03-13",
+            featured: false,
+            order: 23
+        },
+        {
+            slug: "formacion-creatividad",
+            title: "Creatividad sin Límites",
+            category: "formacion",
+            description: "Explorando la creatividad a través de ejercicios fotográficos.",
+            image: "images/portfolio/formacion-creatividad.jpg",
+            date: "2026-03-12",
+            featured: false,
+            order: 24
+        },
+        {
+            slug: "formacion-comunidad",
+            title: "Comunidad de Aprendizaje",
+            category: "formacion",
+            description: "El compañerismo y trabajo en equipo en los cursos de formación.",
+            image: "images/portfolio/formacion-comunidad.jpg",
+            date: "2026-03-11",
+            featured: false,
+            order: 25
         }
     ];
 
@@ -177,7 +367,7 @@
     function renderFilters(categories) {
         portfolioFilters.innerHTML = categories.map(cat => 
             `<button class="filter-btn ${cat === 'todos' ? 'active' : ''}" data-category="${cat}">
-                ${cat}
+                ${cat.charAt(0).toUpperCase() + cat.slice(1)}
             </button>`
         ).join('');
 
@@ -257,7 +447,7 @@
         const imageContainer = lightbox.querySelector('.lightbox-image');
 
         if (item.image) {
-            imageContainer.innerHTML = `<img src="${item.image}" alt="${item.title}" onerror="this.style.display='none'; this.parentElement.innerHTML='<svg width=\'80\' height=\'80\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><path d=\'M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z\'/><circle cx=\'12\' cy=\'13\' r=\'4\'/></svg>'">`;
+            imageContainer.innerHTML = `<img src="${item.image}" alt="${item.title}" onerror="this.style.display='none'; this.parentElement.innerHTML='<svg width=\\'80\\' height=\\'80\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'1\\'><path d=\\'M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z\\'/><circle cx=\\'12\\' cy=\\'13\\' r=\\'4\\'/></svg>'">`;
         } else {
             imageContainer.innerHTML = `
                 <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
