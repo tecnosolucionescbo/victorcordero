@@ -445,9 +445,10 @@
             `;
         }
 
+        // Mostrar SOLO el título, ocultar la categoría
         lightboxTitle.textContent = item.title;
-        lightboxCategory.textContent = item.category;
-        lightboxDesc.textContent = item.description || '';
+        lightboxCategory.style.display = 'none';  // ← OCULTA LA CATEGORÍA
+        lightboxDesc.textContent = '';
         lightboxCounter.textContent = `${lightboxIndex + 1} / ${filteredItems.length}`;
     }
 
