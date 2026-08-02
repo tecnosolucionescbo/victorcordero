@@ -51,11 +51,17 @@
                 <div class="admin-form-row">
                     <div>
                         <label class="form-label">Título</label>
-                        <input type="text" id="adTitle" class="admin-input" placeholder="Ej: Retrato Artístico" required>
+                        <input type="text" id="adTitle" class="admin-input" placeholder="Ej: Vida en la Calle" required>
                     </div>
                     <div>
                         <label class="form-label">Categoría</label>
-                        <input type="text" id="adCategory" class="admin-input" placeholder="Ej: retratos, bodas, eventos" required>
+                        <select id="adCategory" class="admin-input" required>
+                            <option value="documentales">Documentales</option>
+                            <option value="urbanas">Urbanas</option>
+                            <option value="graduacion">Graduación</option>
+                            <option value="deporte">Deporte</option>
+                            <option value="formacion">Formación</option>
+                        </select>
                     </div>
                 </div>
                 <div class="admin-form-row">
@@ -102,7 +108,7 @@
             <div class="admin-preview">{
   "slug": "nombre-unico",
   "title": "Título de la Foto",
-  "category": "categoria",
+  "category": "documentales",
   "description": "Descripción breve de la fotografía.",
   "image": "images/portfolio/nombre-imagen.jpg",
   "date": "2026-07-31",
@@ -114,15 +120,14 @@
         <div class="admin-card">
             <h2 class="admin-card-title">Categorías Disponibles</h2>
             <p style="color:var(--muted); font-size:0.875rem; margin-bottom:16px;">
-                Puedes usar cualquiera de estas categorías o crear una nueva:
+                Usa cualquiera de estas categorías para clasificar tus fotos:
             </p>
             <div style="display:flex; flex-wrap:wrap; gap:8px;">
-                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">retratos</span>
-                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">bodas</span>
-                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">eventos</span>
-                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">producto</span>
-                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">moda</span>
-                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">paisajes</span>
+                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">Documentales</span>
+                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">Urbanas</span>
+                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">Graduación</span>
+                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">Deporte</span>
+                <span style="padding:6px 14px; border:1px solid var(--border); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">Formación</span>
             </div>
         </div>
     </div>
