@@ -3,34 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMAGEN | Fotografía Profesional</title>
-    <meta name="description" content="Portafolio de fotografía profesional. Capturando momentos, emociones y historias a través del lente.">
+    <title>Victor Cordero | Fotografía Profesional</title>
+    <meta name="description" content="Portafolio de fotografía profesional. Capturando movimiento, disciplina y esencia visual.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* Ajuste específico para el logo en el navbar */
+        /* Ajustes específicos para el logo centrado */
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            position: relative;
+        }
+        .nav-logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .nav-logo img {
             max-height: 55px;
             width: auto;
             display: block;
         }
-        .nav-container {
-            height: 80px;
+        .nav-links {
+            position: absolute;
+            right: 24px;
+            display: flex;
+            gap: 32px;
         }
+        .nav-toggle {
+            position: absolute;
+            right: 16px;
+        }
+
         /* Ajuste para el logo en el hero */
         .hero-logo img {
             max-width: 220px;
             height: auto;
             display: block;
+            margin: 0 auto;
         }
+
         /* Ajuste para el logo en el footer */
         .footer-logo {
             max-height: 60px;
             width: auto;
             display: block;
+            margin: 0 auto;
         }
+
         /* Ajuste para la foto de "Sobre Mí" */
         .about-img-placeholder img {
             width: 100%;
@@ -38,13 +65,34 @@
             object-fit: cover;
             display: block;
         }
-        /* Ajuste para que el navbar no corte el logo en móviles */
-        @media (max-width: 480px) {
+
+        /* Responsive - Móviles */
+        @media (max-width: 768px) {
+            .nav-logo {
+                position: static;
+                transform: none;
+                left: auto;
+            }
+            .nav-container {
+                justify-content: space-between;
+            }
+            .nav-links {
+                display: none;
+            }
+            .nav-toggle {
+                position: static;
+            }
             .nav-logo img {
                 max-height: 40px;
             }
             .hero-logo img {
                 max-width: 150px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .nav-toggle {
+                display: none !important;
             }
         }
     </style>
@@ -54,7 +102,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#inicio" class="nav-logo">
-                <img src="data/logo.png" alt="IMAGEN">
+                <img src="data/logo.png" alt="Victor Cordero Fotografía">
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="#inicio" class="nav-link">Inicio</a>
@@ -84,7 +132,7 @@
         <div class="hero-grid"></div>
         <div class="hero-content">
             <div class="hero-logo">
-                <img src="data/logo.png" alt="IMAGEN">
+                <img src="data/logo.png" alt="Victor Cordero Fotografía">
             </div>
             <h1 class="hero-title">MOMENTOS QUE PERDURAN</h1>
             <p class="hero-subtitle">Imágenes que cuentan tu historia</p>
@@ -120,7 +168,7 @@
             <div class="about-grid">
                 <div class="about-image">
                     <div class="about-img-placeholder">
-                        <img src="data/fotografia.jpg" alt="Fotógrafa profesional">
+                        <img src="data/fotografia.jpg" alt="Victor Cordero - Fotógrafo">
                     </div>
                     <div class="about-frame about-frame-br"></div>
                     <div class="about-frame about-frame-tl"></div>
@@ -128,29 +176,28 @@
                 <div class="about-content">
                     <h2 class="section-title">SOBRE MÍ</h2>
                     <div class="section-line"></div>
-                    <p class="about-text">Soy una fotógrafa profesional apasionada por capturar la esencia de cada momento. Mi trabajo se centra en crear imágenes que cuenten historias, evocan emociones y perduran en el tiempo.</p>
-                    <p class="about-text">Con más de una década de experiencia en fotografía de retratos, bodas, eventos corporativos y editoriales de moda, he tenido el privilegio de trabajar con clientes de todo el mundo.</p>
-                    <p class="about-text">Cada sesión es una nueva oportunidad para explorar la creatividad y encontrar la luz perfecta. Mi enfoque es siempre personalizado, adaptándome a las necesidades y visión de cada cliente.</p>
+                    <p class="about-text">Soy un fotógrafo apasionado por congelar el movimiento, la disciplina y la esencia del arte visual. Estudiante de fotografía en AVECOFA y Licenciado en Educación, combino mi pedagogía y mi faceta como diseñador de imagen para construir encuadres precisos, potentes y con un propósito narrativo claro.</p>
+                    <p class="about-text">Como runner de corazón, entiendo desde adentro la adrenalina, el esfuerzo y la resistencia del deporte, lo que me permite anticiparme al instante perfecto en la fotografía deportiva. A su vez, aplico el control riguroso de la luz y la composición en el estudio, creando imágenes donde el volumen, el detalle y la personalidad son los verdaderos protagonistas.</p>
                     <div class="about-stats">
                         <div class="stat-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                            <div class="stat-value">500+</div>
+                            <div class="stat-value">+100</div>
                             <div class="stat-label">Sesiones</div>
                         </div>
                         <div class="stat-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-                            <div class="stat-value">10+</div>
+                            <div class="stat-value">5+</div>
                             <div class="stat-label">Años de Experiencia</div>
                         </div>
                         <div class="stat-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                            <div class="stat-value">200+</div>
+                            <div class="stat-value">+80</div>
                             <div class="stat-label">Clientes Felices</div>
                         </div>
                         <div class="stat-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                            <div class="stat-value">15+</div>
-                            <div class="stat-label">Países Visitados</div>
+                            <div class="stat-value">5+</div>
+                            <div class="stat-label">Disciplinas Fotográficas</div>
                         </div>
                     </div>
                 </div>
@@ -199,22 +246,22 @@
                     </form>
                 </div>
                 <div class="contact-info">
-                    <a href="mailto:hola@imagenfoto.com" class="contact-item">
+                    <a href="mailto:victorcordero111@gmail.com" class="contact-item">
                         <div class="contact-icon">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         </div>
                         <div class="contact-details">
                             <div class="contact-label">Email</div>
-                            <div class="contact-value">hola@imagenfoto.com</div>
+                            <div class="contact-value">victorcordero111@gmail.com</div>
                         </div>
                     </a>
-                    <a href="tel:+15551234567" class="contact-item">
+                    <a href="tel:+584249166540" class="contact-item">
                         <div class="contact-icon">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                         </div>
                         <div class="contact-details">
-                            <div class="contact-label">Teléfono</div>
-                            <div class="contact-value">+1 (555) 123-4567</div>
+                            <div class="contact-label">Teléfono / WhatsApp</div>
+                            <div class="contact-value">+58 424-9166540</div>
                         </div>
                     </a>
                     <div class="contact-item">
@@ -223,16 +270,16 @@
                         </div>
                         <div class="contact-details">
                             <div class="contact-label">Ubicación</div>
-                            <div class="contact-value">Ciudad de México, MX</div>
+                            <div class="contact-value">Venezuela</div>
                         </div>
                     </div>
-                    <a href="https://instagram.com" target="_blank" class="contact-item">
+                    <a href="https://instagram.com/victordcg" target="_blank" class="contact-item">
                         <div class="contact-icon">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                         </div>
                         <div class="contact-details">
                             <div class="contact-label">Instagram</div>
-                            <div class="contact-value">@imagen.foto</div>
+                            <div class="contact-value">@victordcg</div>
                         </div>
                     </a>
                     <div class="contact-availability">
@@ -248,7 +295,7 @@
     <footer class="footer">
         <div class="section-container">
             <div class="footer-content">
-                <img src="data/logo.png" alt="IMAGEN" class="footer-logo">
+                <img src="data/logo.png" alt="Victor Cordero Fotografía" class="footer-logo">
                 <p class="footer-tagline">Fotografía Profesional</p>
                 <div class="footer-links">
                     <a href="#inicio" class="footer-link">Inicio</a>
@@ -257,7 +304,7 @@
                     <a href="#contacto" class="footer-link">Contacto</a>
                 </div>
                 <div class="footer-divider"></div>
-                <p class="footer-copy">&copy; <span id="year"></span> IMAGEN. Todos los derechos reservados.</p>
+                <p class="footer-copy">&copy; <span id="year"></span> Victor Cordero. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
