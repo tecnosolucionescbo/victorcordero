@@ -78,6 +78,11 @@
             display: block;
         }
 
+        /* OCULTAR CATEGORÍA EN EL LIGHTBOX */
+        .lightbox-category {
+            display: none !important;
+        }
+
         /* ============================================
            RESPONSIVE
            ============================================ */
@@ -319,7 +324,7 @@
         </div>
     </footer>
 
-    <!-- Lightbox -->
+    <!-- LIGHTBOX - Corregido (sin categoría) -->
     <div class="lightbox" id="lightbox">
         <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -335,7 +340,7 @@
                 <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
             </div>
             <h3 class="lightbox-title" id="lightboxTitle"></h3>
-            <p class="lightbox-category" id="lightboxCategory"></p>
+            <!-- ELIMINADA la línea de categoría -->
             <p class="lightbox-desc" id="lightboxDesc"></p>
             <p class="lightbox-counter" id="lightboxCounter"></p>
         </div>
