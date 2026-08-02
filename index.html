@@ -14,7 +14,7 @@
            AJUSTES PERSONALIZADOS
            ============================================ */
 
-        /* NAVBAR - Logo a la derecha */
+        /* NAVBAR - Logo a la izquierda */
         .nav-container {
             display: flex;
             align-items: center;
@@ -24,10 +24,9 @@
         }
 
         .nav-logo {
-            order: 2;
+            order: 1;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
         }
 
         .nav-logo img {
@@ -37,7 +36,7 @@
         }
 
         .nav-links {
-            order: 1;
+            order: 2;
             display: flex;
             gap: 32px;
         }
@@ -85,10 +84,6 @@
 
         /* Móviles */
         @media (max-width: 768px) {
-            .nav-logo {
-                order: 1;
-                flex: 1;
-            }
             .nav-logo img {
                 max-height: 40px;
             }
@@ -97,7 +92,6 @@
             }
             .nav-toggle {
                 display: flex !important;
-                order: 2;
             }
             .hero-logo img {
                 max-width: 150px;
@@ -117,15 +111,15 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
+            <a href="#inicio" class="nav-logo">
+                <img src="data/logo.png" alt="Victor Cordero Fotografía">
+            </a>
             <div class="nav-links" id="navLinks">
                 <a href="#inicio" class="nav-link">Inicio</a>
                 <a href="#portafolio" class="nav-link">Portafolio</a>
                 <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
                 <a href="#contacto" class="nav-link">Contacto</a>
             </div>
-            <a href="#inicio" class="nav-logo">
-                <img src="data/logo.png" alt="Victor Cordero Fotografía">
-            </a>
             <button class="nav-toggle" id="navToggle" aria-label="Menú">
                 <span></span>
                 <span></span>
